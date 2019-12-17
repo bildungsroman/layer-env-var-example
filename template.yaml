@@ -17,7 +17,7 @@ Resources:
       Policies:
         - AWSXrayWriteOnlyAccess
       Layers:
-        - !Ref EnvConfiglayerarnmyrequestsAsString
+        - !Ref EnvConfiglayerArnAsString
 Parameters:
   StackTagName:
     Type: String
@@ -25,9 +25,9 @@ Parameters:
   EnvironmentTagName:
     Type: String
     Description: Environment Name (injected by Stackery at deployment time)
-  EnvConfiglayerarnmyrequestsAsString:
+  EnvConfiglayerArnAsString:
     Type: AWS::SSM::Parameter::Value<String>
-    Default: /<EnvironmentName>/layer_arn_my_requests
+    Default: /<EnvironmentName>/layerArn
 Metadata:
   EnvConfigParameters:
-    EnvConfiglayerarnmyrequestsAsString: layer_arn_my_requests
+    EnvConfiglayerArnAsString: layerArn
